@@ -1,2 +1,0 @@
-# qiuqiulovestar
-qiuqiulovestar
