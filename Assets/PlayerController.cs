@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	public int score;
 	public Text scoreText;
+	public Transform quitMenu;
 
 	// Use this for initialization
 	void Start () {
 		score = 5; 
 		SetScoreText ();
 		rb2d = GetComponent<Rigidbody2D> ();
+		//quitMenu = 
 	}
 	
 	// Update is called once per frame
@@ -35,8 +37,12 @@ public class PlayerController : MonoBehaviour {
 			Destroy(other.gameObject);
 		}
 		if(other.CompareTag("star")){
-			score--;
-			Destroy(other.gameObject);
+			quitMenu.gameObject.SetActive (true);
+
+			return;
+
+			//score--;
+			//Destroy(other.gameObject);
 		}
 		SetScoreText ();
 		Debug.Log (score);

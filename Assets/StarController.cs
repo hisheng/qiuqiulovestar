@@ -18,7 +18,7 @@ public class StarController : MonoBehaviour {
 	void Update () {
 		shoottime = shoottime + Time.deltaTime;
 		if(shoottime > 1){
-			Instantiate(stars[Random.Range(0,4)], new Vector3(Random.value*14.0f-7.0f, 4, 0), Quaternion.identity);
+			Instantiate(stars[Random.Range(0,4)], new Vector3(Random.value*10.0f-5.0f, 4, 0), Quaternion.identity);
 			shoottime = 0;
 		}
 	}
